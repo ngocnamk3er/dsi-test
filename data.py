@@ -16,7 +16,7 @@ class IndexingTrainDataset(Dataset):
         self.train_data = datasets.load_dataset(
             'json',
             data_files=path_to_data,
-            ignore_verifications=False,
+            # ignore_verifications=False,
             cache_dir=cache_dir
         )['train']
 
