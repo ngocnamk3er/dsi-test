@@ -92,8 +92,8 @@ def main():
     L = 32  # only use the first 32 tokens of documents (including title)
 
     # We use wandb to log Hits scores after each epoch. Note, this script does not save model checkpoints.
-    wandb.login()
-    wandb.init(project="DSI-ArvinZhuang", name="NQ-10k-t5-large")
+    wandb.login(key='c804f1ccb46b89fce13fb3bffe8b517ebb2ffc8a')
+    wandb.init(project="DSI-ArvinZhuang-2", name="NQ-10k-t5-large")
 
     tokenizer = T5Tokenizer.from_pretrained(model_name, cache_dir="cache")
     model = T5ForConditionalGeneration.from_pretrained(model_name, cache_dir="cache")
